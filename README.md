@@ -6,7 +6,7 @@ A really dumb parser of sorts.
 
 Add this to your application's `shard.yml`:
 
-```
+```yaml
 dependencies:
   warsplitter:
     github: t-richards/warsplitter
