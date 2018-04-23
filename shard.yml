@@ -1,0 +1,13 @@
+name: warsplitter
+version: 1.0.0
+
+authors:
+  - Tom Richards <tom@tomrichards.net>
+
+targets:
+  warsplitter:
+    main: src/warsplitter.cr
+
+crystal: 0.24.2
+
+license: MIT
