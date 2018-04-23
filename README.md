@@ -24,6 +24,13 @@ pp war # => War(
        #     @context="in the context of who is the snuggliest")
 ```
 
+## Best practices
+
+  1. This class will raise exceptions if the input cannot be parsed
+  successfully. For the best chance of catching the correct ones, be sure to
+  rescue from `Warsplitter::WarCrime`, the top-level exception defined in this
+  library.
+
 ## Development
 
 TODO: Write development instructions here
