@@ -1,8 +1,15 @@
 require "./spec_helper"
 
 describe War do
-  it "should raise with empty input" do
+  it "should raise with no input" do
     input = ""
+    expect_raises(Warsplitter::SyntaxError) do
+      w = War.new(input)
+    end
+  end
+
+  it "should raise with blank input" do
+    input = " "
     expect_raises(Warsplitter::SyntaxError) do
       w = War.new(input)
     end
@@ -15,15 +22,29 @@ describe War do
     end
   end
 
-  it "should raise with empty second option" do
+  it "should raise with no second option" do
     input = "dogs vs"
     expect_raises(Warsplitter::SyntaxError) do
       w = War.new(input)
     end
   end
 
-  it "should raise with empty context" do
+  it "should raise with blank second option" do
+    input = "dogs vs "
+    expect_raises(Warsplitter::SyntaxError) do
+      w = War.new(input)
+    end
+  end
+
+  it "should raise with no context" do
     input = "dogs vs cats ;"
+    expect_raises(Warsplitter::SyntaxError) do
+      w = War.new(input)
+    end
+  end
+
+  it "should raise with blank context" do
+    input = "dogs vs cats ; "
     expect_raises(Warsplitter::SyntaxError) do
       w = War.new(input)
     end
